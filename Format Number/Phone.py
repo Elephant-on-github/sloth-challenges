@@ -2,7 +2,7 @@ import re
 
 def format_phone_number(number):
     number =  f"({number[:3]}) {number[3:6]}-{number[6:]}"
-    number = re.sub(r'[^-9()1234567890]', '', number)
+    number = re.sub(r'[^-()1234567890]', '', number)
     number = number[:5]+" " + number[5:]
     return number
 
