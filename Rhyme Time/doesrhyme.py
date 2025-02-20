@@ -5,12 +5,8 @@ def doesRhyme(phrase1, phrase2):
     phrase1 = re.sub(r'[^aeiouy]', '', phrase1)
     phrase2 = phrase2.split()[-1].lower()
     phrase2 = re.sub(r'[^aeiouy]', '', phrase2)
-    if phrase1 == phrase2:
-        print("True")
-        return True
-    else:
-        print("False")
-        return False
+    print(phrase1 == phrase2)
+    return phrase1 == phrase2
     
 doesRhyme("Sam I am!", "Green eggs and ham.")
 doesRhyme("Sam I am!", "Green eggs and HAM.")
