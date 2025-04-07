@@ -26,22 +26,29 @@ def lemonade(x):
     return True
 
 # Test cases
-lemonade([10, 10])  # Should return False
-lemonade([5, 5, 10])  # Should return True
+# lemonade([10, 10])  # Should return False
+# lemonade([5, 5, 10])  # Should return True
 
-def randomtest():
+def randomtest(y=None):
     import random
-    y=[]
+    if y is None:  # Initialize y only once
+        y = []
     i = random.randint(0, 3)
     if i == 0:
+        print("5")
         y.append(5)
-        randomtest()
-    if i == 1:
+        randomtest(y)
+    elif i == 1:
+        print("10")
         y.append(10)
-        randomtest()
-    if i == 2:
+        randomtest(y)
+    elif i == 2:
+        print("20")
         y.append(20)
-        randomtest()
-    if i == 3:
+        randomtest(y)
+    elif i == 3:
+        print("exit")
         print(y)
         lemonade(y)
+
+randomtest()
